@@ -27,22 +27,24 @@ class CheckoutForm extends Component {
     return (
       <div className="checkout">
         <p>Would you like to complete the purchase?</p>
-        <CardElement style={{
-          base: {
-            width: "50%",
-            fontSize: "18px",
-            color: '#424770',
-            letterSpacing: '0.025em',
-            fontFamily: 'Source Code Pro, monospace',
-            '::placeholder': {
-              color: '#aab7c4',
+        <div style={{ width: "50%", border: "1px solid black", padding: 15 }}>
+          <CardElement style={{
+            base: {
+              width: "50%",
+              fontSize: "18px",
+              color: '#424770',
+              letterSpacing: '0.025em',
+              fontFamily: 'Source Code Pro, monospace',
+              '::placeholder': {
+                color: '#aab7c4',
+              },
+              padding: "10px",
             },
-            padding: "10px",
-          },
-          invalid: {
-            color: '#9e2146',
-          }
-        }} />
+            invalid: {
+              color: '#9e2146',
+            }
+          }} />
+        </div>
         <button onClick={this.submit}>Send</button>
       </div>
     );
